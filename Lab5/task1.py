@@ -20,6 +20,15 @@ if __name__ == "__main__":
     glass1 = Glass(100, 100)
     glass2 = Glass(250, 75)
     # TODO попробовать инициализировать не корректные объекты
-    glass3 = Glass(-100, 100)
-    glass4 = Glass(250, -75)
-    glass5 = Glass("750", 500)
+    try:
+        glass3 = Glass(250, -75) 
+    except ValueError:
+        pass
+    try:
+        glass4 = Glass(100, 200)
+    except ValueError:
+        pass
+    try:
+        glass5 = Glass("100", 100)
+    except TypeError:
+        pass
